@@ -33,10 +33,40 @@ export function getDogNumberTwo() {
 
 export function postNewDog() {
     // Your code here 
+    const url = "/dogs";
+    const headers = {"Content-Type": "application/x-www-form-urlencoded"};
+    // Use the URLSearchParams API to format your body as shown below
+    const body = new URLSearchParams({
+        name: "larry",
+        age: "4"
+    });
+
+    const options = {
+        method: "POST", 
+        headers: headers,
+        body: body
+    };
+
+    return fetch(url, options)
 }
 
 export function postNewDogV2(name, age) {
      // Your code here 
+     const url = "/dogs";
+     const headers = {"Content-Type": "application/x-www-form-urlencoded"};
+     // Use the URLSearchParams API to format your body as shown below
+     const body = new URLSearchParams({
+         name: "larry",
+         age: "4"
+     });
+ 
+     const options = {
+         method: "POST", 
+         headers: headers,
+         body: body
+     };
+ 
+     return fetch(url, options)
 }
 
 export function deleteDog(id) {
