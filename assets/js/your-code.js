@@ -56,8 +56,8 @@ export function postNewDogV2(name, age) {
      const headers = {"Content-Type": "application/x-www-form-urlencoded"};
      // Use the URLSearchParams API to format your body as shown below
      const body = new URLSearchParams({
-         name: "larry",
-         age: "4"
+         name: name,
+         age: age
      });
  
      const options = {
