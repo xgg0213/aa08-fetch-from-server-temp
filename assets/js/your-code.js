@@ -71,4 +71,18 @@ export function postNewDogV2(name, age) {
 
 export function deleteDog(id) {
       // Your code here 
+      const url = `/dogs/${id}/delete`;
+      const headers = {
+        "Authorization": "ckyut5wau0000jyv5bsrud90y"
+      };
+      // Use the URLSearchParams API to format your body as shown below
+      const body = false;
+  
+      const options = {
+          method: "POST", 
+          headers: headers,
+          body: body
+      };
+  
+      return fetch(url, options);
 }
